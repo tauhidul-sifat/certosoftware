@@ -358,8 +358,8 @@
           <div class="news-latter-form order-md-3 position-relative">
             <h6 class="my-2">Sign up to our newsletter</h6>
             <p>Receive the latest mobile security news, exclusive discounts & offers straight to your inbox!</p>
-            <form id="email-submit-form" action="" method="post" class="mt-2">
-              <input id="subscribe-email"  placeholder="Email address" type="email" >
+            <form id="email-submit-form" action="http://localhost:4321/subscribe/news" method="post" class="mt-2">
+              <input id="subscribe-email" name="subEmail" placeholder="Email address" type="email" >
               <button id="submit-btn"  type="submit">Submit</button>
             </form>
             <span id="not-valid-email-msg" class="ms-2 mt-2 text-danger d-none">Invalid Email Address</span>
