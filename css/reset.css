@@ -1,60 +1,23 @@
 /* ! =============== VARIABLES CSS ===============*/
 :root {
-  /* --header-height: clamp(30px, 20vw, 65px);
-  --logo-width:clamp(50px, 10vw  , 157px)
-  /* ! ========== COLORS ==========*/
-  /* ? Color mode HSL(hue, saturation, lightness)*/
-
-  --dark-navy: #02033b;
-  --yellow: #0000;
-
-  --primary-clr: hsla(40, 100%, 64%, 1);
-  --primary-gradient-clr: linear-gradient(
-    180deg,
-    hsla(42, 90%, 67%, 1),
-    hsla(38, 98%, 60%, 1)
-  );
-
-  --secondary-clr: var(--dark-navy);
-  --secondary-gradient-clr: linear-gradient(
-    180deg,
-    hsla(241, 69%, 47%, 1),
-    hsla(241, 75%, 59%, 1)
-  );
-
   --white-color: hsl(0, 0%, 100%);
   --black-color: hsl(0, 0%, 0%);
-
   /* ! ========== FONT AND TYPOGRAPHY==========*/
   --body-font: "Inter", sans-serif;
   /* ?  .5rem = 8px | 1rem = 16px ...*/
   --h2-font-size: clamp(30px, 5vw, 60px);
   --h3-font-size: clamp(20px, 4vw, 36px);
   --h4-font-size: clamp(1rem, 2vw, 23px);
-  --h5-font-size: 3.3rem;
-  --h6-font-size: ;
-  --biggest-font-size: 2.25rem;
-  --normal-font-size: 0.938rem;
-  --small-font-size: 0.725rem;
-  --button-padding: 0.115rem 0.2rem;
   /* ! ========== FONT LINE HEIGHT ==========*/
-  --normal-lh: 1;
   --h2-lh: 1.1;
   --h3-lh: 1.05;
   --h4-lh: 1.2;
-  --h5-lh: 1;
-  --h6-lh: 1;
   /* ! ========== FONT WEIGHT ==========*/
   --font-300: 300;
   --font-400: 400;
   --font-500: 500;
   --font-600: 600;
   --font-700: 700;
-  --h2-font-weight: 600;
-  --h3-font-weight: 800;
-  --h4-font-weight: 800;
-  --h5-font-weight: 500;
-  --h6-font-weight: 500;
   /* ! ========== Z INDEX ==========*/
   --z-tooltip: 10;
   --z-fixed: 100;
@@ -71,38 +34,23 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font-family: "Inter", sans-serif;
-  color: 1rem;
+  font-family: var(--body-font);
 }
 h2 {
-  color: var(--title-color);
   font-size: var(--h2-font-size);
-  font-weight: var(--h2-font-weight);
-  line-height: var(--h2-lh);
 }
 h3 {
-  color: var(--title-color);
   font-size: var(--h3-font-size);
-  font-weight: var(--h3-font-weight);
-  line-height: var(--h3-lh);
 }
 h4 {
   color: hsla(239, 93%, 12%, 1);
   font-size: var(--h4-font-size);
-  font-weight: var(--h4-font-weight);
-  line-height: var(--h4-lh);
 }
 h5 {
-  color: var(--title-color);
   font-size: var(--h5-font-size);
-  font-weight: var(--h5-font-weight);
-  line-height: var(--h5-lh);
 }
 h6 {
-  color: var(--title-color);
   font-size: var(--h6-font-size);
-  font-weight: var(--h6-font-weight);
-  line-height: var(--h6-lh);
 }
 h1,
 h2,

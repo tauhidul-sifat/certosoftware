@@ -1,0 +1,95 @@
+.navbar.sticky {
+  position: fixed;
+  width: 100%;
+  background: var(--white-color);
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: var(--z-fixed);
+  box-shadow: 0px 4px 12px 0px hsla(245, 100%, 11%, 0.08);
+  animation: headerSticky 0.5s linear;
+}
+/* ! notice-bar CSS */
+.notice-bar {
+  text-align: right;
+  padding: 0.5rem;
+  font-size: 0.8rem;
+  border-bottom: 1px solid hsl(0, 0%, 0%);
+  text-transform: capitalize;
+  width: 100%;
+}
+.notice-bar.hide {
+  display: none;
+}
+.notice-bar a {
+  text-decoration: underline;
+}
+@media screen and (min-width: 600px) {
+  .notice-bar {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1rem;
+  }
+}
+@keyframes headerSticky {
+  from {
+    transform: translateY(-100%);
+    opacity: 0.5;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* From Uiverse.io by javierBarroso */
+.button {
+  position: relative;
+  width: 2em;
+  height: 2em;
+  border: none;
+  margin-left: 2em;
+  background: var(--white-color);
+  border-radius: 10000px;
+  transition: background 0.5s;
+}
+
+.X {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1.5px;
+  background-color: rgb(255, 0, 0);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.Y {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1em;
+  height: 1.5px;
+  background-color: hsl(0, 100%, 50%);
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.button:active {
+  background-color: rgba(130, 0, 0, 0.092);
+}
+
+.button:hover > .close {
+  animation: close 0.2s forwards 0.25s;
+}
+
+@keyframes close {
+  100% {
+    opacity: 1;
+  }
+}

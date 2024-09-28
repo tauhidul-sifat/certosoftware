@@ -32,10 +32,28 @@
     <!-- Custom Style CSS -->
     <link rel="stylesheet" href="css/fly-menu-toggle.css" />
     <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/notice-bar.css" />
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body >
-    <header class="navbar position-fixed top-0 end-0 start-0 ">
+    <header id="header" class="navbar  d-flex flex-column py-0">
+      <nav id="notice-bar" class="notice-bar position-relative">
+        <p>
+          This product make for Work example ©
+          <a target="_blank" href="https://github.com/tarikull-islam"
+            >Tarikul i.</a
+          >
+        </p>
+        <span
+          id="notice-toggle"
+          class="notice-toggle position-absolute translate-middle-y start-0 top-50"
+        >
+          <button class="button">
+            <span class="X"></span>
+            <span class="Y"></span>
+          </button>
+        </span>
+      </nav>
       <nav class="container d-flex align-items-center">
         <a href="/" class="nav-brand z-3"
           ><img src="./assets/logo.svg" class="img-fluid" alt="certo logo"

@@ -73,6 +73,33 @@
     };
     app.formInputValidation();
     app.formHandle();
+    //Header sticky
+    app.headerSticky = function () {
+      /*=============== CHANGE STICKY HEADER ===============*/
+      const scrollHeader = () => {
+        const header = document.getElementById("header");
+        // Add a class if the bottom offset is greater than 100 of the viewport
+        window.scrollY >= 100
+          ? header.classList.add("sticky")
+          : header.classList.remove("sticky");
+      };
+      window.addEventListener("scroll", scrollHeader);
+
+      const isHide = sessionStorage.getItem("isHide"),
+        noticeBar = document.getElementById("notice-bar"),
+        toggleNoticeBar = document.getElementById("notice-toggle");
+      //Add a class if sessionStorage have isHide true
+      if (isHide) {
+        noticeBar.classList.add("hide");
+      }
+      //Notice Board Fun.. Handle and add classes
+      const noticeHandle = () => {
+        sessionStorage.setItem("isHide", true);
+        noticeBar.classList.add("hide");
+      };
+      toggleNoticeBar.addEventListener("click", noticeHandle);
+    };
+    app.headerSticky();
     // User review carousel
     app.userReviewCarousel = () => {
       $("#review-carousel").owlCarousel({
