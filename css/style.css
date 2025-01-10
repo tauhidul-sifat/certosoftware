@@ -428,8 +428,9 @@
 }
 .footer .footer-top .news-latter-form {
   background: hsla(40, 100%, 64%, 1);
-  max-width: 436px;
-  padding: 2rem;
+  /* max-width: 436px; */
+  /* position: relative; */
+  padding: 1rem 0;
   border-radius: 2rem;
 }
 .footer .footer-top .news-latter-form h6 {
@@ -447,6 +448,7 @@
 }
 .footer .footer-top .news-latter-form form {
   display: flex;
+  justify-content: center;
 }
 .footer .footer-top .news-latter-form form button {
   font-size: 15px;

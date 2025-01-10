@@ -37,11 +37,11 @@
   </head>
   <body >
     <header id="header" class="navbar  d-flex flex-column py-0">
-      <nav id="notice-bar" class="notice-bar position-relative">
+      <nav id="notice-bar" class="notice-bar overflow-x-hidden position-relative">
         <p>
           This product make for Work example ©
-          <a target="_blank" href="https://github.com/tarikull-islam"
-            >Tarikul i.</a
+          <a target="_blank" href="https://www.linkedin.com/in/tauhidul-sifat/"
+            >Tauhidul i. Sifat</a
           >
         </p>
         <span
@@ -55,7 +55,7 @@
         </span>
       </nav>
       <nav class="container d-flex align-items-center">
-        <a href="/" class="nav-brand z-3"
+        <a href="/" class="nav-brand py-2  z-3"
           ><img src="./assets/logo.svg" class="img-fluid" alt="certo logo"
         /></a>
         <div class="nav-menu d-flex align-items-center">
@@ -369,19 +369,17 @@
         </div>
       </section>
     </main>
-    <footer class="footer" id="footer">
+    <footer class="footer " id="footer">
       <div class="container">
         <div class="d-flex justify-content-center align-items-center">
         <div class="footer-top d-flex gap-5 flex-wrap">
-          <div class="news-latter-form order-md-3 position-relative">
-            <h6 class="my-2">Sign up to our newsletter</h6>
-            <p>Receive the latest mobile security news, exclusive discounts & offers straight to your inbox!</p>
-            <form id="email-submit-form" action="http://localhost:4321/subscribe/news" method="post" class="mt-2">
+          <div class="news-latter-form order-md-3">
+            <h6 class="my-2 p-4">Sign up to our newsletter</h6>
+            <p class="p-4">Receive the latest mobile security news, exclusive discounts & offers straight to your inbox!</p>
+            <form id="email-submit-form " action="http://localhost:4321/subscribe/news" method="post" class="mt-2">
               <input id="subscribe-email" name="subEmail" placeholder="Email address" type="email" >
               <button id="submit-btn"  type="submit">Submit</button>
             </form>
-            <span id="not-valid-email-msg" class="ms-2 mt-2 text-danger d-none">Invalid Email Address</span>
-            <span id="valid-email-msg" class="ms-2 mt-2 text-success  d-none">Valid Email Address</span>
           </div>
           <div class="link-list order-md-2">
           <a href="/" class="footer-logo">
