@@ -23,56 +23,6 @@
     };
     app.flyMenuHandle();
 
-    // Form Handle
-    app.formInputValidation = () => {
-      $("#subscribe-email").keyup(function () {
-        let inputValue = this.value;
-        const email = new RegExp(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
-        if (email.test(inputValue)) {
-          $("#not-valid-email-msg").addClass("d-none");
-          $("#valid-email-msg").removeClass("d-none");
-          $("#valid-email-msg").addClass("d-block");
-        } else {
-          $("#valid-email-msg").addClass("d-none");
-          $("#not-valid-email-msg").removeClass("d-none");
-          $("#not-valid-email-msg").addClass("d-block");
-        }
-      });
-    };
-    app.formHandle = () => {
-      $("#email-submit-form").submit(async function (e) {
-        e.preventDefault();
-        let inputValue = $("#subscribe-email").val();
-        const email = new RegExp(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+.[A-Z]{2,4}$/i);
-        if (email.test(inputValue) && inputValue.length > 1) {
-          let readyData = JSON.stringify(inputValue);
-          console.log(readyData);
-          await fetch("http://localhost:4321/subscribe/news", {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: readyData,
-          })
-            .then((res) => res.json())
-            .then((data) => {
-              $("#valid-email-msg").text(data.massage);
-            })
-            .catch((err) => console.log(err));
-          $("#not-valid-email-msg").addClass("d-none");
-          $("#valid-email-msg").removeClass("d-none");
-          $("#valid-email-msg").addClass("d-block");
-          $("#subscribe-email").val("");
-        } else {
-          $("#valid-email-msg").addClass("d-none");
-          $("#not-valid-email-msg").removeClass("d-none");
-          $("#not-valid-email-msg").addClass("d-block");
-          $("#not-valid-email-msg").text("Use Valid Email After Submit!!");
-        }
-      });
-    };
-    app.formInputValidation();
-    app.formHandle();
     //Header sticky
     app.headerSticky = function () {
       /*=============== CHANGE STICKY HEADER ===============*/
